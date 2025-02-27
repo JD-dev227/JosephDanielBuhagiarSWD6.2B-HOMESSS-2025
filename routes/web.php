@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('colleges', CollegeController::class)->except(['show', 'destroy']);
+Route::resource('colleges', CollegeController::class)->except(['show']);
 Route::resource('students', StudentController::class)->except(['show']);

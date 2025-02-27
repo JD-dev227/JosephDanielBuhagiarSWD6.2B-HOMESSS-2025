@@ -12,7 +12,7 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        $colleges = College::latest()->get();
+        $colleges = College::all();
         return view('colleges.index', compact('colleges'));
     }
 
