@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
+use App\Models\College;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -37,7 +39,7 @@ class StudentController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource in storage. Store a new student
      */
     public function store(Request $request)
     {
