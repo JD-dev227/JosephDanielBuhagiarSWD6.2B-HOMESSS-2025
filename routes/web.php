@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource('colleges', CollegeController::class)->except(['show', 'destroy']);
+Route::resource('students', StudentController::class)->except(['show']);
 
 Route::get('/', function () {
     return view('welcome');
