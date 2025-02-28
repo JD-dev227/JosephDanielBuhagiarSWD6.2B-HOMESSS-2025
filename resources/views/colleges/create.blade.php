@@ -1,5 +1,6 @@
 @extends('welcome')
-@include('forms.StudentForm')
+
+@include('partials.alerts')
 
 @section('content')
 <div class="container">
