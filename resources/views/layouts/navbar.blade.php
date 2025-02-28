@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">College System</a>
+        <a class="navbar-brand"  href="https://github.com/JD-dev227/JosephDanielBuhagiarSWD6.2B-HOMESSS-2025" >JD-Dev227</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>

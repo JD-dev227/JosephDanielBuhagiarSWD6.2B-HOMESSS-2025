@@ -7,7 +7,7 @@
     <h1>Welcome to College Management System</h1>
     <p class="lead">Easily manage students and colleges with our system.</p>
 
-    <a href="{{ route('students.index') }}" class="btn btn-primary mt-3">View Students</a>
-    <a href="{{ route('colleges.index') }}" class="btn btn-secondary mt-3">View Colleges</a>
+    <button type="button" class="btn btn-outline-dark"href="{{ route('students.index') }}">View Students</button>
+    <button type="button" class="btn btn-outline-dark"href="{{ route('colleges.index') }}">View Colleges</button>
 </div>
 @endsection
