@@ -39,6 +39,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Add Student</button>
+        <button type="button" class="btn btn-success">Success</button>
     </form>
 </div>
 @endsection

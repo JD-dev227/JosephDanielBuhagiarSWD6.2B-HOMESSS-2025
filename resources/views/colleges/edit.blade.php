@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('welcome')
 
 @section('title', isset($college) ? 'Edit College' : 'Add College')
 

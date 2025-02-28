@@ -1,5 +1,5 @@
-@extends('layouts.welcome')
-
+@extends('welcome')
+@include('partials.alerts')
 @section('title', isset($student) ? 'Edit Student' : 'Add Student')
 
 @section('content')
@@ -17,6 +17,7 @@
 
             <div class="row">
                 <label for="name" class="col-sm-2 col-form-label">Name</label>
+
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name', $student->name ?? '') }}" required>
                 </div>
@@ -50,15 +51,11 @@
                 </select>
             </div>
 
-            <fieldset class="mt-4">
-                <legend>Notifications</legend>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Receive Email Updates</label>
-                </div>
-            </fieldset>
-
-            <button type="submit" class="btn btn-primary mt-4">{{ isset($student) ? 'Update' : 'Create' }}</button>
+            <div class="row">
+                <button type="submit" class="btn btn-primary mt-4">{{ isset($student) ? 'Update' : 'Create' }}</button>
+                <button type="button" class="btn btn-outline-primary" href="{{ route('students.index') }}">Back to Main Page</button>
+            </div>
+        
         </fieldset>
     </form>
 </div>

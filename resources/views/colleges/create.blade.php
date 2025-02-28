@@ -19,6 +19,8 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Add College</button>
+        <button type="button" class="btn btn-outline-primary" href="{{ route('students.index') }}">Back to Main Page</button>
+
     </form>
 </div>
 @endsection

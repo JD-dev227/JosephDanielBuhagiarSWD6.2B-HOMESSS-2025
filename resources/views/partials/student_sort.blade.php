@@ -1,3 +1,2 @@
-<a href="{{ route('students.index', ['sort' => 'name']) }}" class="btn btn-secondary btn-sm">
-    Sort by Name
-</a>
+
+<button type="button" class="btn btn-outline-info" href="{{ route('students.index', ['sort' => 'name']) }}" >Sort By Name</button>
