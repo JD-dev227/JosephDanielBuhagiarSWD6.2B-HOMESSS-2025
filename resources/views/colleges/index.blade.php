@@ -4,9 +4,9 @@
 @section('content')
 <div class="container">
     <h1 class="mt-4">Colleges</h1>
-    <table class="table table-bordered">
+    <table  class="table table-hover">
         <thead>
-            <tr>
+            <tr class="table-dark">
                 <th>Name</th>
                 <th>Address</th>
                 <th>Edit/Delete</th>
@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             @foreach ($colleges as $college)
-                <tr>
+                <tr class="table-primary">
                     <td>{{ $college->name }}</td>
                     <td>{{ $college->address }}</td>
                     <td>

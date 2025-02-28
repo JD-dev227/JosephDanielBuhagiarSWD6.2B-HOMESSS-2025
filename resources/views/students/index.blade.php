@@ -9,23 +9,19 @@
    
 
     @if ($students->count() > 0)
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>
-                    <a href="{{ route('students.index', ['college_filter' => request('college_filter'), 'sort' => 'name']) }}">
-                        Name
-                    </a>
-                </th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>College</th>
-                <th>Edit/Delete</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col" >Phone</th>
+                <th scope="col"> College</th>
+                <th scope="col">Edit/Delete</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($students as $student)
-                <tr>
+                <tr class="table-dark">
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->email }}</td>
                     <td>{{ $student->phone }}</td>
