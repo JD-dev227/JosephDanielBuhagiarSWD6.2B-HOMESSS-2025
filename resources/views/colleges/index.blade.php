@@ -1,17 +1,15 @@
-@extends('layouts.welcome')
+@extends('welcome')
 
 @section('content')
 <div class="container">
     <h1 class="mt-4">Colleges</h1>
-   
-    <a href="{{ route('colleges.create') }}" class="btn btn-primary mb-3">Add College</a>
-
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Address</th>
+                <th>Edit/Delete</th>
             </tr>
         </thead>
         <tbody>

@@ -19,5 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route for the Create/Edit page
+Route::get('/create-edit', function () {
+    return view('create_edit');
+})->name('create.edit');
+
 Route::resource('colleges', CollegeController::class)->except(['show']);
 Route::resource('students', StudentController::class)->except(['show']);
+
+
+//Route::resource('colleges', CollegeController::class);
+//Route::resource('students', StudentController::class);
+

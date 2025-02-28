@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('welcome')
 
 @section('content')
 <div class="container">
@@ -16,16 +16,19 @@
         </select>
     </form>
 
-    <a href="{{ route('students.create') }}" class="btn btn-primary mb-3">Add Student</a>
-
+    @if ($students->count() > 0)
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th><a href="{{ route('students.index', ['sort' => 'name']) }}">Name</a></th>
+                <th>
+                    <a href="{{ route('students.index', ['college_filter' => request('college_filter'), 'sort' => 'name']) }}">
+                        Name
+                    </a>
+                </th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>College</th>
-                <th>Actions</th>
+                <th>Edit/Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -47,5 +50,8 @@
             @endforeach
         </tbody>
     </table>
+    @else
+        <p class="text-center mt-3">No students found for the selected college.</p>
+    @endif
 </div>
 @endsection

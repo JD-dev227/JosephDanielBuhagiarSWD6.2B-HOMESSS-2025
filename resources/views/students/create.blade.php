@@ -1,4 +1,4 @@
-@extends('layouts.welcome')
+@extends('welcome')
 
 @section('content')
 <div class="container">
@@ -21,6 +21,11 @@
             <input type="text" class="form-control" id="phone" name="phone" required>
         </div>
 
+        <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" name="dob" id="dob" class="form-control" required>
+        </div>
+        
         <div class="mb-3">
             <label for="college_id" class="form-label">College</label>
             <select class="form-select" id="college_id" name="college_id" required>
