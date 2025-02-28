@@ -7,7 +7,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Edit/Delete</th>
@@ -16,7 +15,6 @@
         <tbody>
             @foreach ($colleges as $college)
                 <tr>
-                    <td>{{ $college->id }}</td>
                     <td>{{ $college->name }}</td>
                     <td>{{ $college->address }}</td>
                     <td>

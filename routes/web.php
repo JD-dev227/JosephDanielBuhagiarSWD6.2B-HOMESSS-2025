@@ -24,6 +24,10 @@ Route::get('/create-edit', function () {
     return view('create_edit');
 })->name('create.edit');
 
+Route::get('/', function () {
+    return view('home');  // This will load home.blade.php
+})->name('home');
+
 Route::resource('colleges', CollegeController::class)->except(['show']);
 Route::resource('students', StudentController::class)->except(['show']);
 

@@ -6,6 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a> </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('colleges.index') }}">Colleges</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('students.index') }}">Students</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('create.edit') }}">Create/Edit</a></li>
