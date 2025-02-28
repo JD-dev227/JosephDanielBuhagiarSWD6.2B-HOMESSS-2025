@@ -1,5 +1,6 @@
 @extends('welcome')
 
+
 @section('content')
 <div class="container">
     <h1 class="mt-4">Add Student</h1>

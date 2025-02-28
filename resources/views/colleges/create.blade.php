@@ -1,4 +1,5 @@
 @extends('welcome')
+@include('forms.StudentForm')
 
 @section('content')
 <div class="container">

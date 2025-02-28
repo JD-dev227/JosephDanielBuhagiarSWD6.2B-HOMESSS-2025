@@ -3,18 +3,9 @@
 @section('content')
 <div class="container">
     <h1 class="mt-4">Students</h1>
+    @include('partials.student_filter')
 
-    <form method="GET" class="mb-3">
-        <label for="college_filter">Filter by College:</label>
-        <select name="college_filter" id="college_filter" class="form-select" onchange="this.form.submit()">
-            <option value="">All Colleges</option>
-            @foreach ($colleges as $college)
-                <option value="{{ $college->id }}" {{ request('college_filter') == $college->id ? 'selected' : '' }}>
-                    {{ $college->name }}
-                </option>
-            @endforeach
-        </select>
-    </form>
+   
 
     @if ($students->count() > 0)
     <table class="table table-bordered">
@@ -54,4 +45,5 @@
         <p class="text-center mt-3">No students found for the selected college.</p>
     @endif
 </div>
+@include('partials.student_sort')
 @endsection
