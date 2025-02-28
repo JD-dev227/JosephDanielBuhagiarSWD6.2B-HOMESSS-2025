@@ -45,6 +45,7 @@
     @else
         <p class="text-center mt-3">No students found for the selected college.</p>
     @endif
+    
 </div>
 @include('partials.student_sort')
 @endsection

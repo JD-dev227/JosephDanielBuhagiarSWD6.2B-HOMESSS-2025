@@ -53,7 +53,8 @@
 
             <div class="row">
                 <button type="submit" class="btn btn-primary mt-4">{{ isset($student) ? 'Update' : 'Create' }}</button>
-                <button type="button" class="btn btn-outline-primary" href="{{ route('students.index') }}">Back to Main Page</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ route('home') }}'">Back to Main Page</button>
+
             </div>
         
         </fieldset>

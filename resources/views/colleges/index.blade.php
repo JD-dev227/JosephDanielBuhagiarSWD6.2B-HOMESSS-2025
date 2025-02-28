@@ -29,5 +29,6 @@
             @endforeach
         </tbody>
     </table>
+     <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ route('home') }}'">Back to Main Page</button>
 </div>
 @endsection

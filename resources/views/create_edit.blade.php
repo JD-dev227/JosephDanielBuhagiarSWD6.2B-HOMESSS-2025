@@ -8,5 +8,7 @@
     
     <a href="{{ route('colleges.create') }}" class="btn btn-primary">Add College</a>
     <a href="{{ route('students.create') }}" class="btn btn-success">Add Student</a>
+    <a href="{{ route('home') }}" class="btn btn-outline-dark">Home</a>
+
 </div>
 @endsection
