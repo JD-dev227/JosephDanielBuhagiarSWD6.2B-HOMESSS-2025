@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             @foreach ($colleges as $college)
-                <tr class="table-primary">
+                <tr class="table-dark">
                     <td>{{ $college->name }}</td>
                     <td>{{ $college->address }}</td>
                     <td>
