@@ -6,9 +6,8 @@
     <h2>Create/Edit Records</h2>
     <p>Select an option to create or edit records:</p>
     
-    <a href="{{ route('colleges.create') }}" class="btn btn-primary">Add College</a>
-    <a href="{{ route('students.create') }}" class="btn btn-success">Add Student</a>
-    <a href="{{ route('home') }}" class="btn btn-outline-dark">Home</a>
-
+    <button type="button" class="btn btn-outline-dark" onclick="window.location='{{ route('home') }}'">Home</button>
+    <button type="button" class="btn btn-outline-dark" onclick="window.location='{{ route('students.create') }}'">Add Studnet</button>
+    <button type="button" class="btn btn-outline-dark" onclick="window.location='{{ route('colleges.create') }}'">Add College</button>
 </div>
 @endsection
