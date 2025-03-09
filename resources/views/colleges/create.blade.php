@@ -1,8 +1,8 @@
-@extends('welcome')
+@extends('welcome') <!-- // This extends the layout from 'welcome.blade.php'. The content of this view will be injected into the section defined in 'welcome.blade.php'.-->
 
-@include('partials.alerts')
+@include('partials.alerts')  <!--// This includes the 'alerts' partial view (typically used for displaying messages, such as errors or success).-->
 
-@section('content')
+@section('content') <!-- // This defines the content section that will be injected into the '@yield('content')' section in the 'welcome.blade.php' layout.-->
 <div class="container">
     <h1 class="mt-4">Add College</h1>
 

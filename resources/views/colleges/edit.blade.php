@@ -7,13 +7,14 @@
     <h2 class="mb-4">{{ isset($college) ? 'Edit College' : 'Add New College' }}</h2>
     
     <form method="POST" action="{{ isset($college) ? route('colleges.update', $college->id) : route('colleges.store') }}">
-        @csrf
-        @isset($college)
-            @method('PUT')
+        @csrf <!-- CSRF token for form security, protecting against cross-site request forgery attacks.-->
+        @isset($college) <!--This checks if the $college exists (i.e., we are editing an existing college).-->
+            @method('PUT') <!--This sends a PUT request to update the college in the database.-->
+            @endisset
         @endisset
 
-        <fieldset>
-            <legend>College Information</legend>
+        <fieldset><!-- Grouping related form elements for better structure.-->
+            <legend>College Information</legend> <!-- A heading for the form group, denoting that it contains college information.-->
 
             <div class="row">
                 <label for="name" class="col-sm-2 col-form-label">College Name</label>
