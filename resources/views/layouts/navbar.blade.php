@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
         <!-- Brand Link -->
         <a class="navbar-brand" href="https://github.com/JD-dev227/JosephDanielBuhagiarSWD6.2B-HOMESSS-2025">JD-Dev227</a>
