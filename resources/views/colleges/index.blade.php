@@ -6,7 +6,7 @@
     <h1 class="mt-4">Colleges</h1>
     <table  class="table table-hover">
         <thead>
-            <tr class="table-dark">
+            <tr >
                 <th>Name</th>
                 <th>Address</th>
                 <th>Edit/Delete</th>

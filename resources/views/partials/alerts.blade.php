@@ -1,5 +1,5 @@
 @if(session('success'))
-    <div class="alert alert-dismissible alert-danger" role="alert">
+    <div class="alert alert-dismissible alert-success" role="alert">
         {{ session('success') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>

@@ -39,7 +39,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Add Student</button>
-        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location='{{ route('home') }}'">Back to Main Page</button>
     </form>
 </div>
 @endsection

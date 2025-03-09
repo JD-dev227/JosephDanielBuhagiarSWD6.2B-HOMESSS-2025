@@ -13,25 +13,22 @@ class StudentController extends Controller
      */
     public function index(Request $request)
     {
-        $colleges = College::all(); // Get all colleges for the filter dropdown
-
-        // Get the selected college from the request
-        $collegeFilter = $request->input('college_filter');
-    
-        // Build query
+        $colleges = College::all();
         $query = Student::query();
     
-        if ($collegeFilter) {
-            $query->where('college_id', $collegeFilter);
+        if ($request->has('college_filter') && $request->college_filter) {
+            $query->where('college_id', $request->college_filter);
         }
     
-        if ($request->input('sort') === 'name') {
-            $query->orderBy('name');
+        // Toggle sorting logic
+        $sortOrder = $request->get('sort_order', 'asc'); // Default to ascending
+        if ($request->get('sort') == 'name') {
+            $query->orderBy('name', $sortOrder);
+            $sortOrder = ($sortOrder == 'asc') ? 'desc' : 'asc'; // Toggle order
         }
     
-        $students = $query->get(); // Fetch students based on filter and sorting
-    
-        return view('students.index', compact('students', 'colleges'));
+        $students = $query->get();
+        return view('students.index', compact('students', 'colleges', 'sortOrder'));
     }
 
     /**
@@ -87,21 +84,21 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:students,email,' . $student->id,
-            'phone' => 'required|regex:/^(\+?\d{1,3}[-.\s]?)?\d{10}$/',
+            'phone' => 'required|digits:8',
             'dob' => 'required|date',
             'college_id' => 'required|exists:colleges,id',
         ]);
-
+    
         $student->update($request->all());
-        return redirect()->route('students.index')->with('success', 'Student updated successfully!');
+    
+        return redirect()->route('students.index')->with('success', 'Student updated successfully.');
     }
-
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Student $student)
     {
         $student->delete();
-        return redirect()->route('students.index')->with('success', 'Student deleted successfully!');
+        return redirect()->route('students.index')->with('success', 'Student deleted successfully.');
     }
 }

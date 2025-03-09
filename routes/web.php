@@ -30,6 +30,7 @@ Route::get('/', function () {
 
 Route::resource('colleges', CollegeController::class)->except(['show']);
 Route::resource('students', StudentController::class)->except(['show']);
+Route::resource('students', StudentController::class);
 
 
 //Route::resource('colleges', CollegeController::class);
