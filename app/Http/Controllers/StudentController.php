@@ -69,10 +69,10 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Student $student)  // ✅ Use singular 'student'
+    public function edit(Student $student)  
     {
         $colleges = College::all();
-        return view('students.edit', compact('student', 'colleges')); // ✅ Pass 'colleges' too
+        return view('students.edit', compact('student', 'colleges')); 
     }
     
 
