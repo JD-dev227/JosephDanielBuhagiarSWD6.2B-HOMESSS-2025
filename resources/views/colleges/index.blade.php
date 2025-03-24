@@ -2,7 +2,7 @@
 
 @include('partials.alerts')  {{-- This includes the 'alerts' partial for displaying any messages (e.g., success or errors) --}}
 
-@section('content')  {{-- Starts the content section --}}
+@section('content')  
 
 <div class="container">  {{-- This is a Bootstrap container to center and add padding to the content --}}
     <h1 class="mt-4">Colleges</h1>  {{-- Heading for the page --}}

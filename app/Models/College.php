@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class College extends Model
 {
-    // This trait is used for factory-based model testing and seeding.
-    // It allows you to generate a factory for this model.
+
     use HasFactory;
 
     // The $fillable property is used to define which attributes of the model

@@ -6,8 +6,6 @@
     <h1 class="mt-4">Students</h1>
     @include('partials.student_filter')
 
-   
-
     @if ($students->count() > 0)
     <table class="table table-hover">
         <thead>

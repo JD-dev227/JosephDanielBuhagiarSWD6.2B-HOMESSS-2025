@@ -10,7 +10,7 @@
         @csrf <!-- CSRF token for form security, protecting against cross-site request forgery attacks.-->
         @isset($college) <!--This checks if the $college exists (i.e., we are editing an existing college).-->
             @method('PUT') <!--This sends a PUT request to update the college in the database.-->
-            @endisset
+            
         @endisset
 
         <fieldset><!-- Grouping related form elements for better structure.-->
